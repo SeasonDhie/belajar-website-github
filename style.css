@@ -183,6 +183,22 @@ nav a:hover {
   max-width: 680px;
 }
 
+
+.learning-list {
+  max-width: 680px;
+  padding-left: 1.25rem;
+  color: var(--muted);
+}
+
+.learning-list li {
+  margin: 0.5rem 0;
+}
+
+.learning-list strong {
+  color: var(--text);
+}
+
+
 .footer {
   padding: 24px 0;
   color: var(--muted);
