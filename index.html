@@ -9,6 +9,7 @@
   <title>BelajarWeb | Proyek Pertama</title>
 
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -47,26 +48,71 @@
       <div class="container">
         <p class="eyebrow">ROADMAP</p>
         <h2>Yang akan saya pelajari</h2>
+        
+<div class="progress-panel">
+  <div class="progress-label">
+    <span>Progres belajar</span>
+    <strong id="progress-count" aria-live="polite">
+      0 dari 3 selesai
+    </strong>
+  </div>
 
-        <div class="grid">
-          <article class="card">
-            <span class="number">01</span>
-            <h3>HTML</h3>
-            <p>Menyusun struktur dan konten halaman website.</p>
-          </article>
+  <div
+    class="progress-track"
+    id="progress-bar"
+    role="progressbar"
+    aria-label="Progres materi"
+    aria-valuemin="0"
+    aria-valuemax="3"
+    aria-valuenow="0"
+  >
+    <div class="progress-fill" id="progress-fill"></div>
+  </div>
+</div>
 
-          <article class="card">
-            <span class="number">02</span>
-            <h3>CSS</h3>
-            <p>Mengatur warna, layout, tipografi, dan responsivitas.</p>
-          </article>
 
-          <article class="card">
-            <span class="number">03</span>
-            <h3>GitHub</h3>
-            <p>Mengelola perubahan kode, branch, dan merge.</p>
-          </article>
-        </div>
+        
+<div class="grid">
+  <article class="card" data-module>
+    <span class="number">01</span>
+    <h3>HTML</h3>
+    <p>Menyusun struktur dan konten halaman website.</p>
+    <button
+      type="button"
+      class="complete-button"
+      aria-pressed="false"
+    >
+      Tandai selesai
+    </button>
+  </article>
+
+  <article class="card" data-module>
+    <span class="number">02</span>
+    <h3>CSS</h3>
+    <p>Mengatur warna, layout, tipografi, dan responsivitas.</p>
+    <button
+      type="button"
+      class="complete-button"
+      aria-pressed="false"
+    >
+      Tandai selesai
+    </button>
+  </article>
+
+  <article class="card" data-module>
+    <span class="number">03</span>
+    <h3>GitHub</h3>
+    <p>Mengelola perubahan kode, branch, dan merge.</p>
+    <button
+      type="button"
+      class="complete-button"
+      aria-pressed="false"
+    >
+      Tandai selesai
+    </button>
+  </article>
+</div>
+
       </div>
     </section>
 

@@ -229,3 +229,73 @@ nav a:hover {
     padding: 52px 0;
   }
 }
+
+
+/* Learning progress tracker */
+
+.progress-panel {
+  max-width: 680px;
+  margin: 24px 0 30px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.progress-label strong {
+  color: var(--primary);
+}
+
+.progress-track {
+  height: 10px;
+  margin-top: 14px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--border);
+}
+
+.progress-fill {
+  width: 0%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--primary);
+  transition: width 0.25s ease;
+}
+
+.complete-button {
+  margin-top: 14px;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--primary);
+  color: #ffffff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.complete-button:hover {
+  background: var(--primary-dark);
+}
+
+.card.is-complete {
+  border-color: #16a34a;
+  background: #f0fdf4;
+}
+
+.card.is-complete .complete-button {
+  background: #15803d;
+}
+
+.complete-button:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 3px;
+}
