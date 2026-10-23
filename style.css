@@ -299,3 +299,9 @@ nav a:hover {
   outline: 3px solid #93c5fd;
   outline-offset: 3px;
 }
+
+.storage-message {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
