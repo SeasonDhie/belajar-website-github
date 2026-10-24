@@ -7,6 +7,7 @@ const countLabel = document.querySelector("#progress-count");
 const progressBar = document.querySelector("#progress-bar");
 const progressFill = document.querySelector("#progress-fill");
 const storageMessage = document.querySelector("#storage-message");
+const resetButton = document.querySelector("#reset-progress");
 
 const validModuleIds = new Set(
   cards
@@ -160,3 +161,29 @@ cards.forEach((card) => {
 
 // Memulihkan status saat halaman pertama kali dibuka.
 updateUI();
+
+// Menghapus progres belajar setelah konfirmasi pengguna.
+resetButton?.addEventListener("click", () => {
+  const confirmed = window.confirm(
+    "Apakah kamu yakin ingin menghapus semua progres belajar?"
+  );
+
+  if (!confirmed) {
+    return;
+  }
+
+  try {
+    localStorage.removeItem(STORAGE_KEY);
+    completedModules = new Set();
+
+    updateUI();
+
+    showStorageMessage("Progres belajar berhasil direset.");
+  } catch (error) {
+    console.warn("Progres gagal direset:", error);
+
+    showStorageMessage(
+      "Progres gagal direset. Penyimpanan browser mungkin tidak tersedia."
+    );
+  }
+});
