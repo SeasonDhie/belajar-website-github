@@ -305,3 +305,31 @@ nav a:hover {
   color: var(--muted);
   font-size: 0.85rem;
 }
+
+/* Reset learning progress */
+
+.progress-actions {
+  margin: 12px 0 24px;
+}
+
+.reset-button {
+  padding: 10px 14px;
+  border: 1px solid #dc2626;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #b91c1c;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.reset-button:hover {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.reset-button:focus-visible {
+  outline: 3px solid #fca5a5;
+  outline-offset: 3px;
+}
