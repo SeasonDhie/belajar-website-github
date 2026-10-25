@@ -333,3 +333,20 @@ nav a:hover {
   outline: 3px solid #fca5a5;
   outline-offset: 3px;
 }
+
+/* Catatan penyimpanan progres */
+
+.progress-storage-note {
+  max-width: 680px;
+  margin: 10px 0 12px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+  .progress-storage-note {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+}
